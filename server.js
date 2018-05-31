@@ -55,6 +55,12 @@ app.get('/about', (request, response) => {
   });
 });
 
+app.get('/projects', (request, response) => {
+  response.render('projects.hbs', {
+    pageTitle: 'My Project'
+  });
+});
+
 app.get('/bad', (request, response) => {
   response.send({
     errorMessage: 'unable to reach host'
